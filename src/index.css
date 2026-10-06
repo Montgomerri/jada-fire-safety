@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600&family=DM+Sans:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { @apply bg-paper font-sans text-ink antialiased; }
+  a, button, select { @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ember; }
+}
+
+@layer components {
+  .wrap { @apply mx-auto w-full max-w-[1200px] px-6 sm:px-8; }
+  .section-eyebrow { @apply text-xs uppercase tracking-[0.14em] text-muted; }
+  .section-title { @apply font-display text-4xl font-medium leading-[1.05] tracking-[-0.02em] md:text-6xl; }
+  .section-sub { @apply text-lg leading-relaxed text-muted; }
+  .btn-primary { @apply inline-flex h-[52px] items-center justify-center gap-2 rounded-full bg-ink px-7 font-medium text-paper transition-colors hover:bg-ember; }
+  .btn-outline { @apply inline-flex h-[52px] items-center justify-center gap-2 rounded-full border border-ink px-7 font-medium text-ink transition-colors hover:bg-ink hover:text-paper; }
+}
